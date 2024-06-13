@@ -1,6 +1,7 @@
 // Option 3
 import { count } from "console";
 import { useState, useEffect } from "react";
+import { useTitle } from "../hooks/useTitle";
 
 type CounterProps = {
     initialValue?: number
@@ -15,7 +16,7 @@ type CounterProps = {
 
 // Option 1: Throws Error
 const Counter = (props: CounterProps) => {
-
+    useTitle("Counter");
 // Option 2: Creating a local variable
 //let counter = props.initialValue;
 

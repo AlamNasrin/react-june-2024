@@ -5,17 +5,13 @@ import React, {MouseEvent} from 'react';
 import { Product } from "./model/Product"; 
 import {addToCart as addItemToCart} from '../redux-store/gadgetsReducer';
 import { CartItem } from "./model/CartItem";
-import { useAxiosGetProducts } from "../hooks/useAxiosFetchProducts";
 
 const GadgetStore: React.FC = () => {
 
 
-    // const [products, setProducts] = useState<Product[]>([]);
+    const [products, setProducts] = useState<Product[]>([]);
     const dispatch = useDispatch();
    
-    // useEffect and getProducts are now in custom hook 
-    const [products] = useAxiosGetProducts();
-    /*
     useEffect(() => {
         getProducts();
 
@@ -31,7 +27,6 @@ const GadgetStore: React.FC = () => {
             console.log(error);
         }
     }
-        */
 
     function addToCart(product: Product): void {
         dispatch(addItemToCart(new CartItem(product, 1)));

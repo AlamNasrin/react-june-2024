@@ -66,7 +66,7 @@ function Login3() {
                 <div>
                     <label htmlFor="name">User Name</label>
                     <input ref = {userNameRef} type="text" id = "name" placeholder="UserName" value ={userName} 
-                    onChange={handleUserName}
+                    onChange={handleUserName} aria-label = 'name'
                     /> {/* Binding from state to control */}
                 </div>
                 <div>

@@ -1,3 +1,5 @@
+import { useTitle } from "../hooks/useTitle";
+
 type MessageProps = {
     text: string;
     color?: string;
@@ -5,6 +7,7 @@ type MessageProps = {
 
 function Message(props: MessageProps) {
 
+    useTitle("Home");
     const {text, color} = props;
 
 console.log("Message props: ", props);
